@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/RequstAndUser
+    username: postgres
+    password: root
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
