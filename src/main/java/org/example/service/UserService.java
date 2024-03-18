@@ -33,8 +33,9 @@ public class UserService {
                 // Переназначаем каждый запрос на пользователя в статусе ONLINE с наименьшим количеством открытых запросов
                 extractedRequests(users, openRequests);
             }
+            log.info("Запрос переназначен на пользователя с минимальным количеством открытых запросов");
         });
-        log.info("Запрос переназначен на пользователя с минимальным количеством открытых запросов");
+        log.info("Кандидатов для распределения запросов со статусом OFFLINE не было обнаружено");
     }
 
     private void extractedRequests(List<User> users, List<Request> openRequests) {
